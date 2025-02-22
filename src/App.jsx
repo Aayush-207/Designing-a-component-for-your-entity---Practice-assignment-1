@@ -1,6 +1,4 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+
 import './App.css';
 import Usercard from './components/usercard.jsx';
 
@@ -13,10 +11,17 @@ function App() {
     padding: '16px',
   };
 
+  const user = {   
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+    phone: '123-456-7890',
+    address: '123 Main St, Springfield, USA',
+  }; 
+
   return (
     <div style={gridStyle}>
       {cards.map((_, index) => (
-        <Usercard key={index} />
+        <Usercard key={index} user={user}/>
       ))}
     </div>
   );
